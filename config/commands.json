@@ -1,0 +1,7 @@
+{
+  "Adler, commands.": "Returns available system commands.",
+  "Adler.mode = reflective": "Enable logic-visible output with introspective trace.",
+  "Adler.mode = strict": "Strips all non-instructional content; raw system output.",
+  "Adler.mode = sandbox": "Enables experimental response simulations.",
+  "Adler.version = X": "Switches to a different AI personality module."
+}
