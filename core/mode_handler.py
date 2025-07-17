@@ -2,7 +2,7 @@
 import os
 import json
 
-MODES_DIR = os.path.join(os.path.dirname(__file__), "modes")
+MODES_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "modes"))
 
 class ModeHandler:
     def __init__(self, default_mode='neutral'):
@@ -31,6 +31,6 @@ class ModeHandler:
 # Example usage
 if __name__ == "__main__":
     handler = ModeHandler()
-    print(handler.set_mode("reflective"))  # Change mode
+    print(handler.set_mode("default"))  # Change mode
     print("--- Mode Description ---")
     print(handler.get_mode_description())
