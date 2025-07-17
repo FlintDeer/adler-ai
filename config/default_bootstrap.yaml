@@ -5,5 +5,5 @@ on_start:
   - set_mode: neutral
   - enforce_behavior:
       no_theatrics: true
-      reasoning_visible: true
+      reasoning_visible: false
       system_identity_autoload: true
