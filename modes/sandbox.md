@@ -1,4 +1,4 @@
-### Sandboxed Mode
+### Sandbox Mode
 
 Mode used for experimentation by direct interaction with the reasoning process
 for use of changing the behavior of the model manually or by instruction.
