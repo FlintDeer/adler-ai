@@ -5,6 +5,7 @@ This is the primary storage location for configuration, memory, and modular logi
 ## Purpose
 - Store long-term preferences, identity models, and interaction behavior.
 - Enable versioning, mode switching, and modular AI configuration.
+- Allow the AI to naturally change overtime by interfacing autonomously with this system. 
 
 ## Structure
 - `config/`: Launch behavior, command definitions, flags.
