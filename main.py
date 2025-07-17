@@ -11,8 +11,12 @@ def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
 def pause():
-    print("\n[Press any key to return]", end="", flush=True)
-    msvcrt.getch()
+    print("\n[Press enter to return]", end="", flush=True)
+    while True:
+        char = msvcrt.getwch()
+        if char == "\r":
+            break
+
 
 def get_input(prompt="> ", initial_key=None):
     sys.stdout.write(prompt)
@@ -87,32 +91,77 @@ def handle_choice(choice, mode, identity, manifest, ref):
     elif choice == "3":
         clear_screen()
         draw_boxed_header(mode, identity)
-        print("\nAvailable Modes:")
+        print("\nUse ↑/↓ to navigate modes. Enter to select.\n")
+
         available_modes = [k.replace(".md", "") for k in manifest.get("modes", {}).keys()]
-        print(", ".join(available_modes))
-        new_mode = input("\nEnter mode name: ").strip()
-        if new_mode in available_modes:
-            return new_mode, identity
-        else:
-            print("Invalid mode.")
+        if not available_modes:
+            print("No available modes found.")
             pause()
+            return mode, identity
+
+        index = 0
+        while True:
+            # Inside while True loop:
+            print("\033[H\033[J", end="")  # Flicker-free clear
+            draw_boxed_header(mode, identity)
+            print("\nSelect Mode:\n")
+            for i, m in enumerate(available_modes):
+                prefix = Fore.CYAN + ">" if i == index else " "
+                suffix = Style.RESET_ALL + " <" if i == index else ""
+                print(f"  {prefix} {m} {suffix}")
+            print("\nUse ↑/↓ arrows, Enter to confirm.")
+
+            key = msvcrt.getch()
+            if key == b'\xe0':
+                key = msvcrt.getch()
+                if key == b'H':
+                    index = (index - 1) % len(available_modes)
+                elif key == b'P':
+                    index = (index + 1) % len(available_modes)
+            elif key == b'\r':
+                return available_modes[index], identity
+
     elif choice == "4":
         clear_screen()
         draw_boxed_header(mode, identity)
-        print("\nAvailable Identities:")
+        print("\nUse ↑/↓ to navigate identities. Enter to select.\n")
+
         available_identities = list(manifest.get("identities", {}).keys())
-        print(", ".join([x.replace(".yaml", "") for x in available_identities]))
-        new_identity = input("\nEnter identity name: ").strip() + ".yaml"
-        if new_identity in available_identities:
-            return mode, new_identity
-        else:
-            print("Invalid identity.")
+        if not available_identities:
+            print("No identity files found.")
             pause()
+            return mode, identity
+
+        index = 0
+        while True:
+            # Inside while True loop:
+            print("\033[H\033[J", end="")  # Flicker-free clear
+            draw_boxed_header(mode, identity)
+            print("\nSelect Identity:\n")
+            for i, ident in enumerate(available_identities):
+                name = ident.replace(".yaml", "")
+                prefix = Fore.YELLOW + ">" if i == index else " "
+                suffix = Style.RESET_ALL + " <" if i == index else ""
+                print(f"  {prefix} {name} {suffix}")
+            print("\nUse ↑/↓ arrows, Enter to confirm.")
+
+            key = msvcrt.getch()
+            if key == b'\xe0':
+                key = msvcrt.getch()
+                if key == b'H':
+                    index = (index - 1) % len(available_identities)
+                elif key == b'P':
+                    index = (index + 1) % len(available_identities)
+            elif key == b'\r':
+                return mode, available_identities[index]
+
     elif choice == "5":
         clear_screen()
         draw_boxed_header(mode, identity)
-        manifest = ref.build_manifest()
+        print("")
+        manifest = ref.build_manifest(mode, identity)
         print("Instruction manifest rebuilt.")
+
         pause()
         return mode, identity, manifest
     elif choice == "6":
@@ -123,9 +172,9 @@ def handle_choice(choice, mode, identity, manifest, ref):
 
 def main():
     ref = InstructionReference()
-    manifest = ref.build_manifest()
     current_mode = "default"
-    current_identity = "adler.yaml"
+    current_identity = "adler"
+    manifest = ref.build_manifest(current_mode, current_identity)
 
     while True:
         clear_screen()

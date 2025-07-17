@@ -1,48 +1,52 @@
-
 import os
 import json
 import yaml
-from pathlib import Path
 
 class InstructionReference:
-    def __init__(self, root=None):
-        # Default root path points to one level above this script's directory
-        self.root_path = Path(root) if root else Path(__file__).resolve().parents[1]
-        self.source_dirs = ["identities", "logs", "memory", "modes"]
-        self.output_file = self.root_path / "core" / "instruction_manifest.json"
+    def __init__(self):
+        self.base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+        self.modes_path = os.path.join(self.base_path, "modes")
+        self.identities_path = os.path.join(self.base_path, "identities")
+        self.memory_path = os.path.join(self.base_path, "memory")
+        self.output_path = os.path.join(self.base_path, "instruction_manifest.json")
 
-    def build_manifest(self):
-        manifest = {}
+    def read_file(self, path):
+        if os.path.exists(path):
+            with open(path, 'r', encoding='utf-8') as f:
+                return f.read()
+        return ""
 
-        for folder in self.source_dirs:
-            dir_path = self.root_path / folder
-            category_data = {}
+    def read_yaml(self, path):
+        if os.path.exists(path):
+            with open(path, 'r', encoding='utf-8') as f:
+                return yaml.safe_load(f)
+        return {}
 
-            if not dir_path.exists():
-                continue
+    def read_identity_memory(self, identity_name):
+        profile_name = identity_name.replace(".yaml", "")
+        profile_memory_dir = os.path.join(self.memory_path, profile_name)
+        memory_entries = {}
 
-            for file in dir_path.rglob("*"):
-                if file.is_file():
-                    if file.suffix in [".md", ".txt"]:
-                        with open(file, "r", encoding="utf-8") as f:
-                            category_data[file.name] = f.read()
-                    elif file.suffix == ".json":
-                        with open(file, "r", encoding="utf-8") as f:
-                            category_data[file.name] = json.load(f)
-                    elif file.suffix in [".yaml", ".yml"]:
-                        with open(file, "r", encoding="utf-8") as f:
-                            category_data[file.name] = yaml.safe_load(f)
+        if os.path.exists(profile_memory_dir):
+            for fname in os.listdir(profile_memory_dir):
+                fpath = os.path.join(profile_memory_dir, fname)
+                memory_entries[fname] = self.read_file(fpath)
 
-            manifest[folder] = category_data
+        return memory_entries
 
-        # Save to instruction_manifest.json
-        with open(self.output_file, "w", encoding="utf-8") as f:
+    def build_manifest(self, current_mode, current_identity):
+        mode_file = os.path.join(self.modes_path, current_mode + ".md")
+        identity_file = os.path.join(self.identities_path, current_identity, current_identity + ".json")
+
+        mode_description = self.read_file(mode_file)
+
+        with open(identity_file, 'r') as f:
+            # Load the JSON data into a Python dictionary or list
+            data = json.load(f)
+
+        manifest = data
+
+        with open(self.output_path, 'w', encoding='utf-8') as f:
             json.dump(manifest, f, indent=2)
 
         return manifest
-
-# Example usage
-if __name__ == "__main__":
-    ref = InstructionReference()
-    instruction_state = ref.build_manifest()
-    print(ref.root_path)
