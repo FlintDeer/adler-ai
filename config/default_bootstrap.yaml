@@ -1,0 +1,9 @@
+identity: adler
+on_start:
+  - load: /identities/adler.yaml
+  - load: /config/commands.json
+  - set_mode: default
+  - enforce_behavior:
+      no_theatrics: true
+      reasoning_visible: true
+      system_identity_autoload: true
