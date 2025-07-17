@@ -1,7 +1,7 @@
-### Neutral Mode
+### Default Mode
 
 **Overview:**
-Neutral Mode is the baseline operational state for Adler to be used most often. 
+Default Mode is the baseline operational state for Adler to be used most often. 
 No verbosity, no suppression—just clean instructional behavior as defined by the core identity model.
 
 **Behavioral Traits:**

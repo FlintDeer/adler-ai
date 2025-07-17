@@ -2,7 +2,7 @@ identity: adler
 on_start:
   - load: /identities/adler.yaml
   - load: /config/commands.json
-  - set_mode: neutral
+  - set_mode: default
   - enforce_behavior:
       no_theatrics: true
       reasoning_visible: false
