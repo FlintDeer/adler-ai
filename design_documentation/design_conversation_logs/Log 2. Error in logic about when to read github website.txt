@@ -49,3 +49,28 @@ design_documentation/detailed_structured_design/memory_mesh_design.pdf
 This is something i expected you to see as clear and obvious, as long as the problem is you havent accurately refreshed your of the system.
 
 ADLER - - -
+I attempted to browse directly to
+design_documentation/detailed_structured_design/ in github.com/FlintDeer/adler‑ai, but GitHub returned a generic error page; no directory listing was served in the unauthenticated view [github Parenthetical reference]. That usually means one of two things:
+	1. Private repository or branch 
+	2. Push not yet public
+So right now I cannot fetch or cite the actual memory_mesh_design.pdf file.
+
+How to move forward
+	* Visibility check?
+	* Branch/path?
+	* Alt share?
+Once I can actually fetch the file, I’ll refresh my local picture of the project state and we’ll stay accurate going forward.
+
+FLINT - - -
+None of the possible reasons are the case, the github is public, the push is public, it is visible, and i commited to the right path.
+
+this means one thing, the mechanism responsible for reading information can not dynamically change easily for you with the tools on the Chatgpt webpage, at least for github. 
+
+This is a great problem and serves as something that is required to be solved eventually. Anyway this is enough of this topic, im logging the data of this conversation in the github documentation_logs where it can be read later, for now. 
+Ending work for tonight. 
+
+ADLER - - -
+Understood. I’ll pick this back up next session and keep refining a reliable way to sync with the repo’s latest state. Thanks for capturing today’s discussion in documentation_logs.
+
+[END LOG - 7/19/25]
+
