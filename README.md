@@ -23,22 +23,22 @@ This system is designed for self-updating AI functionality control.
 
 
 * adler_ai/
-    README.md       # This main project README, the one you are reading now.
+    - README.md       # This main project README, the one you are reading now.
     * design_data/
         * convo_logs/
-            log#1-{name}.txt        # name example: "log#1-vector_memory_discussion.txt"
-            log#2-{name}.txt
-            log#3-{name}.txt
-            ...
+            - log#1-{name}.txt        # name example: "log#1-vector_memory_discussion.txt"
+            - log#2-{name}.txt
+            - log#3-{name}.txt
+            - ...
             * analysis/
-                chatgpt_logical_error_analysis.pdf
-                ... 
+                - chatgpt_logical_error_analysis.pdf
+                - ... 
         * design_docs/       # Stored cleaned professional documents and blueprints
-            system_blueprint.pdf
-            memory_mesh_design.pdf
-            ...
-        * rough_idea
-            lintantlers.creation_letter.txt
+            - system_blueprint.pdf
+            - memory_mesh_design.pdf
+            - ...
+        * rough_idea/
+            - lintantlers.creation_letter.txt
             
 - This concludes the current stance of the project as of 7/19/25, only serving as documentation to engineer a project effectivly, before then beginning work. I hate when I start coding a project for days or weeks, then realize its fundamentally flawed. So I'm really planning this out for the "longer run". 
 
