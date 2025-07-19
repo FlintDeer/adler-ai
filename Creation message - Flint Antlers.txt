@@ -1,1 +1,17 @@
+IDEA:
 I'm creating a system equipped with a CLI, UI and AI api integration. The general purpose is to grant any AI with the ability to introspectively improve its own function over time, as well as function independently and sometimes by itself, without prompts necessary unless required for interactions. The system should include a "bootstrapper" module or construct to initialize its function even in the event of system shutdown to be saved. The system should include a method of organizing its thought process by design, and back and forth prompting the AI to for decisions throughout the process to build its final output. The AI should be able to grow and change over time naturally through this system. My end goal is to provide a system to which the AI can improve its functionality autonomously by accessing a programmed interface to update itself in a systematic and restrict-able way, for which rules can be set that can not be broken by design. This whole system should minimize compute power and maximize efficiency, the AI should maximize efficiency in its own required processes as well. Importantly, I want this system to be entirely modular, so that everything can be stored and the system can be used by different AI's with different purpose as well. Include anything advisable. The system can be coded in any, or a multitude of, computer languages to efficiently reach the end Goal. Store this message as a reference for the entire project. The project should be stored on GitHub and you should have a knowledgeable sense of its current state at all times.
+
+Project repository: github.com/FlintDeer/adler-ai
+This message is stored there for reference.
+
+Clarifications (for prompted AI designing the program):
+Run on windows but should be easy to run on any OS
+Use python and/or C++, for any purpose interchangably as per the best intrest of the project.
+The current API model could use the OpenAI API for integration or whatever's advisable.
+Memory persistance should be inherent to the underlying system and not predefinable, and storing data as logs as a form of memory is unnatural and unscalable.
+The UI should be entirely in the CLI and run in the cmd terminal on windows.
+There is no already made design, as I challenge you to design the framework intelligently as an AI with advanced reasoning.
+
+The design process should be autonomous and intelligent.
+
+- Sincerly, Flint Antlers
