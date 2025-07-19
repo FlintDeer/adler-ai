@@ -1,17 +1,11 @@
 # Adler AI System Repository
 
-This is the primary storage location for configuration, memory, and modular logic for the `Adler` AI identity.
+This is the primary storage location for configuration, memory, and information required for logic for AI identities.
 
 ## Purpose
-- Store long-term preferences, identity models, and interaction behavior.
-- Enable versioning, mode switching, and modular AI configuration.
-- Allow the AI to naturally change overtime by interfacing autonomously with this system. 
+- A long term container for a system providing the ability for an ai to grow and change over time, and procedurally by its own design.
+- Enable versioning, mode switching, and modular configuration.
+- Allow the AI to naturally change overtime by interfacing autonomously with this system.
+- Allow a way for the AI to run autonomously, not always needing a user to prompt it 
 
-## Structure
-- `config/`: Launch behavior, command definitions, flags.
-- `identities/`: Full AI profiles (Adler, other future versions).
-- `memory/`: Persistent factual or contextual memory.
-- `modes/`: Functional mode instructions and overrides.
-- `logs/`: History of behavior changes.
-
-This system is designed for self-updating AI identity control.
+This system is designed for self-updating AI functionality control.
