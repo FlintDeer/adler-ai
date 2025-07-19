@@ -21,23 +21,28 @@ This system is designed for self-updating AI functionality control.
 ## FOLDER STRUCTURE OVERVIEW WITH EXAMPLE OF FOLDER CONTENTS BUT WITHOUT EXACT FILE NAMES
 - the file names are may be examples and they are not required to match exact files located in the repository. This is so I only have to change this folder when updating folder structure, not the individual files, which change a lot.
 
-adler-ai/
-├── design_data/
-│   ├── convo_logs/                 
-│   │   ├── analysis/
-│   │   │   ├── chatgpt-logical-error-analysis.pdf
-│   │   │   └── ...
-│   │   ├── log#1-{name}.txt  # name example: "log#1-vector_memory_discussion.txt"
-│   │   ├── log#2-{name}.txt
-│   │   ├── log#3-{name}.txt
-│   │   └── ...
-│   ├── design_docs/           # Stores cleaned professional documents and blueprints
-│   │   ├── blueprint_system.pdf
-│   │   ├── memory_mesh_design.pdf
-│   │   └── ...
-│   └── rough_idea/
-│       └── flintantler.creation_letter.txt
-└── README.md                # This main project README, the one you are reading now.
 
+adler_ai
+|   README.md       # This main project README, the one you are reading now.
+|   
+\---design_data
+    +---convo_logs
+    |   |   log#1-{name}.txt        # name example: "log#1-vector_memory_discussion.txt"
+    |   |   log#2-{name}.txt
+    |   |   log#3-{name}.txt
+    |   |   ...
+    |   |   
+    |   \---analysis
+    |           chatgpt_logical_error_analysis.pdf
+    |           ...
+    |           
+    +---design_docs         # Stores cleaned professional documents and blueprints
+    |       system_blueprint.pdf
+    |       memory_mesh_design.pdf
+    |       ...
+    |       
+    \---rough_idea
+            flintantlers.creation_letter.txt
+            
 - This concludes the current stance of the project as of 7/19/25, only serving as documentation to engineer a project effectivly, before then beginning work. I hate when I start coding a project for days or weeks, then realize its fundamentally flawed. So I'm really planning this out for the "longer run". 
 
