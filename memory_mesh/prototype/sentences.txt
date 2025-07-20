@@ -1,0 +1,5 @@
+parrot  A green parrot squawked loudly
+canary  A yellow canary was singing
+sparrow A brown sparrow hopped on the branch
+eagle   An eagle soared high above the valley
+hawk    A hawk circled over the field
