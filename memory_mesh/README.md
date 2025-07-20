@@ -1,4 +1,4 @@
-## Integration roadmap (short-term)
+## roadmap (short-term)
     - Refactor prototype into a package
         * memory_mesh/__init__.py → MemoryStore class exposing store(), associate(), recall(), decay().
     - Swap pickle for SQLite (or faiss + sqlite):
