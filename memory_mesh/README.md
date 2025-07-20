@@ -1,15 +1,15 @@
-Integration roadmap (short-term)
-    1. Refactor prototype into a package
+## Integration roadmap (short-term)
+    - Refactor prototype into a package
         * memory_mesh/__init__.py → MemoryStore class exposing store(), associate(), recall(), decay().
-    2. Swap pickle for SQLite (or faiss + sqlite):
+    - Swap pickle for SQLite (or faiss + sqlite):
         * Table vectors(id TEXT PRIMARY KEY, embedding BLOB)
         * Table edges(a TEXT, b TEXT, weight REAL).
-    3. Expose an internal API to the Core Orchestrator
+    - Expose an internal API to the Core Orchestrator
         * memory_mesh_client.py with simple function calls (if running in-process) or HTTP endpoints (if run as a daemon).
-    4. Hook into the reasoning loop
+    - Hook into the reasoning loop
         * Before each LLM step: recall(k, current_context_id) → inject returned IDs as scratch-pad cues.
         * After successful task completion: associate(active_ids).
-    5. Add decay scheduling in the Bootstrapper’s heartbeat (e.g., every 10 min multiply all edge weights by 0.99).
+    - Add decay scheduling in the Bootstrapper’s heartbeat (e.g., every 10 min multiply all edge weights by 0.99).
 
 Move pickle → SQLite, write 10-line loader/saver                # Durable, inspectable storage.                                 
 Wrap `MemoryStore` in a tiny Flask service                      # Lets Core Orchestrator call it asynchronously.                
