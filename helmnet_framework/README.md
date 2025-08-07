@@ -1,7 +1,7 @@
 **Description:**
 
     (A helm is the steering mechanism of a ship)
-    
+
     The reason its called HelmNet is because this module, 
     as a framework, *"steers"*  the function of a LLM to 
     hopefully improve its memory and processing functionality 
@@ -18,7 +18,7 @@
     ↓
     [Prompt Constructor: injects hint/context/etc]
     ↓
-    [Wrapper sends full prompt to LLM]
+    [Wrapper sends full prompt to external LLM API]
     ↓
     [LLM Output]
 **Components:**
