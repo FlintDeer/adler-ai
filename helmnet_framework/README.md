@@ -4,13 +4,13 @@
 
 [User Input] 
     ↓
-[Lightweight Controller Transformer]
+[Controller (stub): interprets or modifies intent]
     ↓
-[Prompt / Routing / Modulation Output]
+[Prompt Constructor: injects hint/context/etc]
     ↓
-[Frozen Base LLM]
+[Wrapper sends full prompt to LLM]
     ↓
-[Final Output]
+[LLM Output]
 
 **Components:**
 
