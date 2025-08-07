@@ -20,18 +20,18 @@
     [LLM Output]
 
 **Components:**
-**1.**
+    **1.**
 
-    Controller Transformer (small and dynamic)
-    - Stores abstract vectors as functional 
-        memory and conseptual knowledge.
-    - Learns how to adapt to variably to 
-        functions and contexts.
-    - Can be trained locally.
-    - Modules (undecided as of rn), ideas:
-        - Memory bank. (vector store)
-        - Meta-state encoder. (tracks internal context over time)
-        - User model.
+        Controller Transformer (small and dynamic)
+        - Stores abstract vectors as functional 
+          memory and conseptual knowledge.
+        - Learns how to adapt to variably to 
+            functions and contexts.
+        - Can be trained locally.
+        - Modules (undecided as of rn), ideas:
+            - Memory bank. (vector store)
+            - Meta-state encoder. (tracks internal context over time)
+            - User model.
 **2.** 
 
     Frozen Model (LLM)
