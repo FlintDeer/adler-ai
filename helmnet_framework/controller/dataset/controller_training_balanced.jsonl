@@ -1,0 +1,495 @@
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "I don\u2019t quite get it\u2014what are you trying to say?", "output": "[query] [clarify]"}
+{"input": "Let\u2019s add some detail.", "output": "[expand]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "Let\u2019s reword that for clarity.", "output": "[adjust] [clarify]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "I agree with that.", "output": "[confirm]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "Let\u2019s stop here.", "output": "[halt]"}
+{"input": "Let\u2019s stop here.", "output": "[halt]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "Yes, and I\u2019d love to hear more.", "output": "[confirm] [expand]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "I don\u2019t quite get it\u2014what are you trying to say?", "output": "[query] [clarify]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "I don\u2019t quite get it\u2014what are you trying to say?", "output": "[query] [clarify]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "That\u2019s right, now please expand on it.", "output": "[confirm] [expand]"}
+{"input": "Let\u2019s rethink and modify the idea.", "output": "[reflect] [adjust]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "That needs some thought and maybe revision.", "output": "[reflect] [adjust]"}
+{"input": "Can you explain that again more clearly?", "output": "[query] [clarify]"}
+{"input": "Let\u2019s rethink and modify the idea.", "output": "[reflect] [adjust]"}
+{"input": "That\u2019s right, now please expand on it.", "output": "[confirm] [expand]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "Let\u2019s rethink and modify the idea.", "output": "[reflect] [adjust]"}
+{"input": "This needs reflection and perhaps a question.", "output": "[reflect] [query]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "This needs reflection and perhaps a question.", "output": "[reflect] [query]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Let\u2019s take a moment to think and then ask.", "output": "[reflect] [query]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "This needs reflection and perhaps a question.", "output": "[reflect] [query]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "What does that mean exactly?", "output": "[query] [clarify]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Try adjusting it and making it easier to understand.", "output": "[adjust] [clarify]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "Let\u2019s reword that for clarity.", "output": "[adjust] [clarify]"}
+{"input": "Try adjusting it and making it easier to understand.", "output": "[adjust] [clarify]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "I don\u2019t quite get it\u2014what are you trying to say?", "output": "[query] [clarify]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "I agree\u2014can you go into more detail?", "output": "[confirm] [expand]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Can we reflect on that and try to change it?", "output": "[reflect] [adjust]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "I agree\u2014can you go into more detail?", "output": "[confirm] [expand]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "That needs some thought and maybe revision.", "output": "[reflect] [adjust]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "I agree\u2014can you go into more detail?", "output": "[confirm] [expand]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "That\u2019s right, now please expand on it.", "output": "[confirm] [expand]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Let\u2019s take a moment to think and then ask.", "output": "[reflect] [query]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "Try adjusting it and making it easier to understand.", "output": "[adjust] [clarify]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "What does that mean exactly?", "output": "[query] [clarify]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "I agree with that.", "output": "[confirm]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "Let\u2019s reword that for clarity.", "output": "[adjust] [clarify]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "I agree with that.", "output": "[confirm]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "I agree\u2014can you go into more detail?", "output": "[confirm] [expand]"}
+{"input": "Let\u2019s stop here.", "output": "[halt]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Let\u2019s reword that for clarity.", "output": "[adjust] [clarify]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "Can you explain that again more clearly?", "output": "[query] [clarify]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "What does that mean exactly?", "output": "[query] [clarify]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "Let\u2019s add some detail.", "output": "[expand]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Let\u2019s reword that for clarity.", "output": "[adjust] [clarify]"}
+{"input": "I\u2019m not sure about that\u2014can we think and ask more?", "output": "[reflect] [query]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "That explanation could be clearer\u2014try again differently.", "output": "[adjust] [clarify]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "I don\u2019t quite get it\u2014what are you trying to say?", "output": "[query] [clarify]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "I agree with that.", "output": "[confirm]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "That needs some thought and maybe revision.", "output": "[reflect] [adjust]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Let\u2019s add some detail.", "output": "[expand]"}
+{"input": "That\u2019s right, now please expand on it.", "output": "[confirm] [expand]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "What does that mean exactly?", "output": "[query] [clarify]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "Let\u2019s stop here.", "output": "[halt]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "Let\u2019s stop here.", "output": "[halt]"}
+{"input": "Let\u2019s add some detail.", "output": "[expand]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "Let\u2019s stop here.", "output": "[halt]"}
+{"input": "Let\u2019s take a moment to think and then ask.", "output": "[reflect] [query]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "I agree with that.", "output": "[confirm]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "Let\u2019s reword that for clarity.", "output": "[adjust] [clarify]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "That needs some thought and maybe revision.", "output": "[reflect] [adjust]"}
+{"input": "Can you explain that again more clearly?", "output": "[query] [clarify]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Yes, and I\u2019d love to hear more.", "output": "[confirm] [expand]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "This needs reflection and perhaps a question.", "output": "[reflect] [query]"}
+{"input": "Can we reflect on that and try to change it?", "output": "[reflect] [adjust]"}
+{"input": "I agree\u2014can you go into more detail?", "output": "[confirm] [expand]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "What does that mean exactly?", "output": "[query] [clarify]"}
+{"input": "I\u2019m not sure about that\u2014can we think and ask more?", "output": "[reflect] [query]"}
+{"input": "I agree with that.", "output": "[confirm]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "That explanation could be clearer\u2014try again differently.", "output": "[adjust] [clarify]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "Let\u2019s reword that for clarity.", "output": "[adjust] [clarify]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Try adjusting it and making it easier to understand.", "output": "[adjust] [clarify]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "Let\u2019s reword that for clarity.", "output": "[adjust] [clarify]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "Let\u2019s stop here.", "output": "[halt]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "Let\u2019s take a moment to think and then ask.", "output": "[reflect] [query]"}
+{"input": "Can you explain that again more clearly?", "output": "[query] [clarify]"}
+{"input": "Try adjusting it and making it easier to understand.", "output": "[adjust] [clarify]"}
+{"input": "Let\u2019s add some detail.", "output": "[expand]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "This needs reflection and perhaps a question.", "output": "[reflect] [query]"}
+{"input": "Let\u2019s add some detail.", "output": "[expand]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "Can you explain that again more clearly?", "output": "[query] [clarify]"}
+{"input": "What does that mean exactly?", "output": "[query] [clarify]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Let\u2019s rethink and modify the idea.", "output": "[reflect] [adjust]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "This needs reflection and perhaps a question.", "output": "[reflect] [query]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "Yes, and I\u2019d love to hear more.", "output": "[confirm] [expand]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "Let\u2019s take a moment to think and then ask.", "output": "[reflect] [query]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "I\u2019m not sure about that\u2014can we think and ask more?", "output": "[reflect] [query]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "I agree with that.", "output": "[confirm]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "Yes, and I\u2019d love to hear more.", "output": "[confirm] [expand]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "Let\u2019s add some detail.", "output": "[expand]"}
+{"input": "Let\u2019s rethink and modify the idea.", "output": "[reflect] [adjust]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "That needs some thought and maybe revision.", "output": "[reflect] [adjust]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "Can we reflect on that and try to change it?", "output": "[reflect] [adjust]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "Let\u2019s rethink and modify the idea.", "output": "[reflect] [adjust]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "Let\u2019s stop here.", "output": "[halt]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "Let\u2019s stop here.", "output": "[halt]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "That\u2019s right, now please expand on it.", "output": "[confirm] [expand]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "I don\u2019t quite get it\u2014what are you trying to say?", "output": "[query] [clarify]"}
+{"input": "I need to think about that more.", "output": "[reflect]"}
+{"input": "Can we reflect on that and try to change it?", "output": "[reflect] [adjust]"}
+{"input": "Can we reflect on that and try to change it?", "output": "[reflect] [adjust]"}
+{"input": "Let\u2019s change the way that\u2019s stated.", "output": "[adjust]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "Yes, and I\u2019d love to hear more.", "output": "[confirm] [expand]"}
+{"input": "That needs some thought and maybe revision.", "output": "[reflect] [adjust]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "I agree with that.", "output": "[confirm]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Let\u2019s reword that for clarity.", "output": "[adjust] [clarify]"}
+{"input": "Yes, and I\u2019d love to hear more.", "output": "[confirm] [expand]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "I agree with that.", "output": "[confirm]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "We should rephrase this.", "output": "[adjust]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "Can we reflect on that and try to change it?", "output": "[reflect] [adjust]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "This might be incorrect.", "output": "[reject]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "That\u2019s right, now please expand on it.", "output": "[confirm] [expand]"}
+{"input": "I\u2019m not sure about that\u2014can we think and ask more?", "output": "[reflect] [query]"}
+{"input": "Try adjusting it and making it easier to understand.", "output": "[adjust] [clarify]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "That\u2019s right, now please expand on it.", "output": "[confirm] [expand]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "What does that mean exactly?", "output": "[query] [clarify]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Let\u2019s take a moment to think and then ask.", "output": "[reflect] [query]"}
+{"input": "This needs reflection and perhaps a question.", "output": "[reflect] [query]"}
+{"input": "That\u2019s right, now please expand on it.", "output": "[confirm] [expand]"}
+{"input": "That wasn\u2019t totally clear\u2014could you clarify?", "output": "[clarify]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "Let\u2019s take a moment to think and then ask.", "output": "[reflect] [query]"}
+{"input": "Yes, that\u2019s correct.", "output": "[confirm]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "That explanation could be clearer\u2014try again differently.", "output": "[adjust] [clarify]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "We can pause for now.", "output": "[halt]"}
+{"input": "I agree with that.", "output": "[confirm]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "Is that true?", "output": "[query]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "That doesn\u2019t seem accurate.", "output": "[reject]"}
+{"input": "Can we reflect on that and try to change it?", "output": "[reflect] [adjust]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Let\u2019s stop here.", "output": "[halt]"}
+{"input": "That makes sense.", "output": "[confirm]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "Try a different approach to explaining it.", "output": "[adjust]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Please explain that another way.", "output": "[clarify]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "Let\u2019s step back and reflect on this.", "output": "[reflect]"}
+{"input": "Can you say that again more clearly?", "output": "[clarify]"}
+{"input": "Let\u2019s stop here.", "output": "[halt]"}
+{"input": "What do you mean by that?", "output": "[query]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "Let\u2019s add some detail.", "output": "[expand]"}
+{"input": "Can I ask something about this?", "output": "[query]"}
+{"input": "Could you expand on that point?", "output": "[expand]"}
+{"input": "Try adjusting it and making it easier to understand.", "output": "[adjust] [clarify]"}
+{"input": "Can you explain that again more clearly?", "output": "[query] [clarify]"}
+{"input": "Tell me more about that.", "output": "[expand]"}
+{"input": "I don\u2019t think that\u2019s right.", "output": "[reject]"}
+{"input": "I think that\u2019s enough.", "output": "[halt]"}
+{"input": "Let\u2019s take a moment to think and then ask.", "output": "[reflect] [query]"}
+{"input": "This deserves some deeper consideration.", "output": "[reflect]"}

@@ -1,61 +1,39 @@
 import torch
-from torch.utils.data import DataLoader
+from torch import nn, optim
 from transformers import AutoTokenizer
-from controller_dataset import ControllerDataset
-from controller_model import ControllerTransformer
-import os
+from controller_model import ControllerModel, MODULATION_TOKENS
 
-# Hyperparameters
-tokenizer_name = "distilbert-base-uncased"
-data_path = "controller/dataset/controller_training.jsonl"
-max_len = 128
-embed_dim = 256
-batch_size = 4
-num_epochs = 20
-learning_rate = 3e-4
-save_path = "controller/controller_model.pt"
-
-# Load tokenizer and add special tokens
-tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
-special_tokens = ["[reflect]", "[adjust]", "[clarify]", "[expand]", "[summarize]", "[ask]", "[reject]"]
-tokenizer.add_tokens(special_tokens)
-vocab_size = len(tokenizer)
-
-# Load dataset and dataloader
-dataset = ControllerDataset(data_path, tokenizer_name=tokenizer_name, max_length=max_len)
-dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
-
-# Initialize model
-model = ControllerTransformer(vocab_size, embed_dim=embed_dim, max_len=max_len)
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model.to(device)
 
-# Loss and optimizer
-criterion = torch.nn.CrossEntropyLoss()
-optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
+model = ControllerModel(vocab_size=tokenizer.vocab_size).to(device)
+optimizer = optim.Adam(model.parameters(), lr=1e-4)
+loss_fn = nn.BCEWithLogitsLoss()
 
-# Training loop
-model.train()
-for epoch in range(num_epochs):
+import json
+with open("controller/dataset/controller_training_balanced.jsonl", "r") as f:
+    data = [json.loads(line) for line in f]
+
+token_map = {tok: idx for idx, tok in enumerate(MODULATION_TOKENS)}
+
+def encode_sample(sample):
+    input_ids = tokenizer.encode(sample["input"], return_tensors="pt").to(device)
+    label_vector = torch.zeros(len(MODULATION_TOKENS)).to(device)
+    for tok in sample["output"].split():
+        if tok in token_map:
+            label_vector[token_map[tok]] = 1.0
+    return input_ids, label_vector.unsqueeze(0)
+
+for epoch in range(10):
     total_loss = 0
-    for input_ids, target_ids in dataloader:
-        input_ids = input_ids.to(device)
-        target_ids = target_ids.to(device)
-
-        ignore_index = tokenizer.pad_token_id  # usually 0
-        criterion = torch.nn.CrossEntropyLoss(ignore_index=tokenizer.pad_token_id)
-
+    for sample in data:
+        input_ids, label = encode_sample(sample)
         optimizer.zero_grad()
-        outputs = model(input_ids)  # [batch, seq, vocab]
-        loss = criterion(outputs.reshape(-1, vocab_size), target_ids.reshape(-1))
+        logits = model(input_ids)
+        loss = loss_fn(logits, label)
         loss.backward()
         optimizer.step()
-
         total_loss += loss.item()
+    print(f"Epoch {epoch+1}/10, Loss: {total_loss:.4f}")
 
-    avg_loss = total_loss / len(dataloader)
-    print(f"Epoch {epoch + 1}/{num_epochs} - Loss: {avg_loss:.4f}")
-
-# Save the model
-torch.save(model.state_dict(), save_path)
-print(f"Controller model saved to {save_path}")
+torch.save(model.state_dict(), "controller_model.pt")
