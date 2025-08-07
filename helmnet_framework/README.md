@@ -1,8 +1,9 @@
-The reason its called HelmNet is because this module, 
-as a framework, *"steers"* the function of a LLM to hopefully 
-improve its memory and processing functionality with a 
-smaller (dynamic!!!) network to stand in as a sort of
-way to learn by controlling the LLM's function.
+    (A helm is the steering mechanism of a ship)
+    The reason its called HelmNet is because this module, 
+    as a framework, *"steers"*  the function of a LLM to hopefully 
+    improve its memory and processing functionality with a 
+    smaller (dynamic!!!) network to stand in as a sort of
+    way to learn by controlling the LLM's function.
 
 ## Concept Architechure
 
