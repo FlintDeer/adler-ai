@@ -2,15 +2,15 @@
 
 **Flowchart Diagram:**
 
-* [User Input] 
+    [User Input] 
     ↓
-* [Controller (stub): interprets or modifies intent]
+    [Controller (stub): interprets or modifies intent]
     ↓
-* [Prompt Constructor: injects hint/context/etc]
+    [Prompt Constructor: injects hint/context/etc]
     ↓
-* [Wrapper sends full prompt to LLM]
+    [Wrapper sends full prompt to LLM]
     ↓
-* [LLM Output]
+    [LLM Output]
 
 **Components:**
 
