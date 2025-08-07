@@ -20,8 +20,8 @@
     [LLM Output]
 
 **Components:**
-    **1.**
-
+    
+    *** 1.**
         Controller Transformer (small and dynamic)
         - Stores abstract vectors as functional 
           memory and conseptual knowledge.
@@ -32,17 +32,14 @@
             - Memory bank. (vector store)
             - Meta-state encoder. (tracks internal context over time)
             - User model.
-**2.** 
-
-    Frozen Model (LLM)
-    - Takes modified input. (promt or embeddings)
-    - Never trained, just queried.
-**3.** 
-
-    Interpretative Modulation
-    - Converts the controller's output into something the LLM can interpret:
-        - Altered prompts.
-        - Adapter masks.
-        - Function selectors.
-        - Token pre-conditioning.
-
+    *** 2.** 
+        Frozen Model (LLM)
+        - Takes modified input. (promt or embeddings)
+        - Never trained, just queried.
+    ** 3.** 
+        Interpretative Modulation
+        - Converts the controller's output into something the LLM can interpret:
+            - Altered prompts.
+            - Adapter masks.
+            - Function selectors.
+            - Token pre-conditioning.
