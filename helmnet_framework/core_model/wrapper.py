@@ -18,7 +18,7 @@ def query_model(prompt: str, key: str, api_url: str) -> str:
                 {"role": "user", "content": prompt},
             ]
         )
-        print(f"\n[DEBUG] Prompt sent to LLM:\n---\n{prompt}\n---\n")
+        print(f"\n[HELMNET DEBUG] Prompt sent to LLM:\n---\n{prompt}\n---\n")
         return completion.choices[0].message.content
     except Exception as e:
         return f"[API Error] {str(e)}"

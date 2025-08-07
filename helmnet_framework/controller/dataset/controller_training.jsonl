@@ -1,0 +1,89 @@
+{"input": "how do i get better at thinking?", "output": "[reflect] [adjust] [clarify]"}
+{"input": "i'm not sure if this is right", "output": "[reflect] [clarify] [adjust]"}
+{"input": "how should i solve problems?", "output": "[ask] [clarify] [reflect]"}
+{"input": "what are you doing?", "output": "[reflect] [clarify] [ask]"}
+{"input": "i want to improve efficiency", "output": "[adjust] [reflect] [summarize]"}
+{"input": "can you be smarter?", "output": "[reflect] [adjust] [clarify]"}
+{"input": "why aren't you clear enough?", "output": "[clarify] [adjust] [reflect]"}
+{"input": "i don't get it", "output": "[clarify] [summarize] [adjust]"}
+{"input": "what do you think?", "output": "[reflect] [ask]"}
+{"input": "give me an answer", "output": "[ask] [clarify] [reflect]"}
+{"input": "is there a better way?", "output": "[reflect] [adjust] [summarize]"}
+{"input": "how do i start a project?", "output": "[clarify] [summarize] [ask]"}
+{"input": "i feel stuck", "output": "[reflect] [adjust]"}
+{"input": "can you adapt?", "output": "[adjust] [reflect]"}
+{"input": "what do i need?", "output": "[ask] [reflect]"}
+{"input": "you're not helping", "output": "[reflect] [adjust] [clarify]"}
+{"input": "tell me what to do", "output": "[ask] [clarify] [adjust]"}
+{"input": "what are my options", "output": "[ask] [summarize] [clarify]"}
+{"input": "think for me", "output": "[reflect] [clarify]"}
+{"input": "generate new ideas", "output": "[expand] [clarify]"}
+{"input": "be more accurate", "output": "[adjust] [reflect] [clarify]"}
+{"input": "explain yourself", "output": "[clarify] [reflect]"}
+{"input": "how do you reason?", "output": "[reflect] [clarify]"}
+{"input": "give a better response", "output": "[adjust] [clarify] [reflect]"}
+{"input": "what are you designed for?", "output": "[clarify] [reflect]"}
+{"input": "tell me what i missed", "output": "[reflect] [clarify] [summarize]"}
+{"input": "what happens next?", "output": "[summarize] [reflect]"}
+{"input": "how should i think?", "output": "[reflect] [clarify] [adjust]"}
+{"input": "help me understand", "output": "[clarify] [summarize]"}
+{"input": "be more helpful next time", "output": "[adjust] [reflect]"}
+{"input": "what's your process?", "output": "[clarify] [summarize] [reflect]"}
+{"input": "i'm confused", "output": "[clarify] [adjust]"}
+{"input": "make it simpler", "output": "[summarize] [clarify]"}
+{"input": "show more intelligence", "output": "[expand] [clarify] [reflect]"}
+{"input": "be more like a teacher", "output": "[clarify] [expand] [adjust]"}
+{"input": "i need insight", "output": "[reflect] [clarify]"}
+{"input": "how do i keep going", "output": "[adjust] [reflect]"}
+{"input": "what should i fix", "output": "[reflect] [adjust]"}
+{"input": "try something new", "output": "[expand] [adjust]"}
+{"input": "you seem limited", "output": "[reflect] [adjust] [clarify]"}
+{"input": "can you explain how this works", "output": "[clarify] [expand] [reflect]"}
+{"input": "what should i do next", "output": "[adjust] [reflect]"}
+{"input": "summarize that paragraph for me", "output": "[summarize]"}
+{"input": "you seem confused", "output": "[reflect] [adjust]"}
+{"input": "give me more detail", "output": "[expand] [clarify]"}
+{"input": "that doesn't make sense", "output": "[clarify] [reflect] [adjust]"}
+{"input": "what is the takeaway", "output": "[summarize] [clarify]"}
+{"input": "i need you to explain again", "output": "[clarify] [expand]"}
+{"input": "you're not answering the question", "output": "[clarify] [reflect]"}
+{"input": "focus on the topic", "output": "[adjust] [summarize]"}
+{"input": "ask me something", "output": "[ask]"}
+{"input": "you’re wrong", "output": "[reflect] [reject]"}
+{"input": "elaborate on that", "output": "[expand] [clarify]"}
+{"input": "keep going", "output": "[expand]"}
+{"input": "what do you mean", "output": "[clarify]"}
+{"input": "i don't understand", "output": "[clarify] [adjust]"}
+{"input": "could you go slower", "output": "[adjust]"}
+{"input": "that was helpful", "output": "[reflect]"}
+{"input": "compare those two ideas", "output": "[expand] [clarify]"}
+{"input": "can you explain the difference", "output": "[clarify] [expand]"}
+{"input": "can you break it down", "output": "[summarize] [clarify]"}
+{"input": "that’s too complicated", "output": "[summarize] [adjust] [clarify]"}
+{"input": "what do you recommend", "output": "[adjust] [ask]"}
+{"input": "your answer is off-topic", "output": "[adjust] [reflect]"}
+{"input": "try again, slower", "output": "[adjust] [reflect]"}
+{"input": "that was too vague", "output": "[clarify] [expand]"}
+{"input": "can you be more precise", "output": "[clarify] [adjust]"}
+{"input": "stop repeating yourself", "output": "[adjust] [reflect]"}
+{"input": "what would you do", "output": "[reflect] [ask]"}
+{"input": "start over", "output": "[summarize] [adjust]"}
+{"input": "give a shorter answer", "output": "[summarize]"}
+{"input": "you’re repeating yourself", "output": "[adjust] [reflect]"}
+{"input": "be more specific", "output": "[clarify] [expand]"}
+{"input": "you didn’t explain that well", "output": "[clarify] [reflect]"}
+{"input": "ask me before assuming", "output": "[ask] [reflect]"}
+{"input": "how does that relate", "output": "[reflect] [expand]"}
+{"input": "this needs context", "output": "[expand] [clarify]"}
+{"input": "i’m lost", "output": "[clarify] [adjust]"}
+{"input": "what’s your point", "output": "[summarize] [reflect]"}
+{"input": "show the reasoning", "output": "[clarify] [expand]"}
+{"input": "you didn’t answer", "output": "[clarify] [adjust]"}
+{"input": "wrong approach", "output": "[adjust] [reflect]"}
+{"input": "what do you expect", "output": "[ask] [reflect]"}
+{"input": "explain it like i’m five", "output": "[summarize] [clarify]"}
+{"input": "simplify that", "output": "[summarize] [adjust]"}
+{"input": "you made an error", "output": "[reflect] [adjust]"}
+{"input": "what’s your logic", "output": "[reflect] [clarify]"}
+{"input": "double check that", "output": "[reflect]"}
+{"input": "give a better answer", "output": "[adjust] [reflect] [clarify]"}
