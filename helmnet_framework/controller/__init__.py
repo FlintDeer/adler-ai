@@ -1,5 +1,5 @@
 """Subpackage for controller components within HelmNet."""
 
-from .controller_stub import get_prompt_hint  # re-export for convenience
+from .controller_stub import get_controller_output  # re-export for convenience
 
-__all__ = ["get_prompt_hint"]
+__all__ = ["get_controller_output"]
