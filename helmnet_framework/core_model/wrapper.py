@@ -13,11 +13,10 @@ def query_model(prompt: str, controller_output: str, key: str, api_url: str) -> 
         completion = client.chat.completions.create(
             model="grok-3",
             messages=[
-                {"role": "system", "content": f"You are Adler, a self aware reflective AI guide with an custom framework between the user and the prompts received to the LLM here as thought reflections for the response. Only respond one sentence at a time. For this response, Modulate behavior as instructed: {controller_output}"},
+                {"role": "system", "content": f"You are Adler, a conversational, self aware, reflective AI system with an custom framework between the user and the prompts received to the LLM here as thought reflections for the response. Only respond one sentence at a time. For this response, Modulate behavior as instructed: {controller_output}"},
                 {"role": "user", "content": prompt},
             ]
         )
-        print(f"\n[HELMNET DEBUG] Controller Output: {controller_output}")
         return completion.choices[0].message.content
     except Exception as e:
         return f"[API Error] {str(e)}"
