@@ -1,9 +1,26 @@
 # Print boot BEFORE heavy imports for instant feedback
-print("\n[HELMNET] Booting integrated feedback-training loop. Type 'exit' to stop.\n")
-
 import os
 import config
 import time
+import threading
+import itertools
+import sys
+
+os.system('cls')
+
+boot_complete = False
+
+def booting():
+    for c in itertools.cycle(['⣾', '⣷', '⣯', '⣟', '⡿', '⢿', '⣻', '⣽']):
+        if boot_complete:
+            break
+        sys.stdout.write(f"\r{c} [HELMNET] Booting integrated feedback-training loop.")
+        sys.stdout.flush()
+        time.sleep(0.1)
+    
+
+t = threading.Thread(target=booting)
+t.start()
 
 from controller.controller_stub import get_controller_output
 from core_model.wrapper import query_model
@@ -13,6 +30,9 @@ from feedback.extract_training_data import extract_training_pairs
 from controller.auto_trainer import train_on_feedback
 
 from config import ENV_API_KEY, API_URL_CONFIG
+
+boot_complete = True
+sys.stdout.write(f"\r[HELMNET] Ready. Type 'exit' to stop.\033[K\n\n")
 
 FEEDBACK_PATH = "controller/dataset/controller_feedback.jsonl"
 TRAINING_OUTPUT_PATH = "controller/dataset/controller_feedback_training.jsonl"
@@ -53,17 +73,17 @@ def main():
 
         # 1) Controller
         controller_output = get_controller_output(user_input)
-        print(f"[Controller] {controller_output}")
+        print(f"\n[Controller Output] → {controller_output}")
 
         # 2) LLM
         response = query_model(user_input, controller_output, ENV_API_KEY, API_URL_CONFIG)
-        print(f"Adler: {response.strip()}")
+        # the stream is printed as its generated in wrapper.py
 
         # 3) Evaluator
         feedback = evaluate_controller_decision(user_input, controller_output, response, ENV_API_KEY, API_URL_CONFIG)
         raw_eval = (feedback or {}).get("raw", "").strip()
         if "Suggested tokens:" not in raw_eval:
-            print("[Evaluator] No 'Suggested tokens:' found; will still log for review.")
+            print("[Evaluator] → No 'Suggested tokens:' found; will still log for review.")
 
         # 4) Log full record
         log_feedback_sample(user_input, controller_output, response, raw_eval)

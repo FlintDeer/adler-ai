@@ -1,77 +1,83 @@
 import json
 import re
 
-SUGGESTED_RE = re.compile(r"Suggested\s+tokens\s*:\s*(.*)", re.IGNORECASE)
+# Accept "Suggested tokens:" with any spacing/case, tolerate odd punctuation
+SUG_LINE_RE = re.compile(r"suggested\s*tokens\s*:\s*(.*)", re.IGNORECASE)
 
-def _clean_token_block(text: str) -> str:
-    """
-    Accepts messy strings like:
-      "[reflect] [expand]"
-      "[reflect][expand]"
-      "[ reflect ]   [ expand ]"
-      "[reflect], [expand]"
-    and returns a normalized string: "[reflect] [expand]"
+# Accept tokens in:
+#  - square brackets  [clarify]
+#  - parentheses      (clarify)
+#  - bare words       clarify,respond
+#  - mixed separators , ; / whitespace
+TOKEN_RE = re.compile(
+    r"""
+    \[([^\[\]]+)\]            # [token]
+    | \(([^()]+)\)            # (token)
+    | \b([A-Za-z_]+)\b        # bare token (letters/underscore)
+    """,
+    re.VERBOSE,
+)
 
-    Returns "" if nothing valid is found.
-    """
-    # Grab all bracketed tokens like [reflect]
-    tokens = re.findall(r"\[[^\[\]]+\]", text)
-    tokens = [t.strip() for t in tokens if t.strip()]
-    # Deduplicate while preserving order
-    seen = set()
-    deduped = []
-    for t in tokens:
-        if t not in seen:
-            seen.add(t)
-            deduped.append(t)
-    return " ".join(deduped)
+# If you’ve added custom tokens, list them here so bare-word parsing is safe:
+KNOWN = {
+    "reflect", "clarify", "adjust", "reject",
+    "expand", "confirm", "query", "halt",
+    "respond"
+}
+
+def _normalize_tokens(raw: str) -> str:
+    if not raw:
+        return ""
+    found = []
+    for m in TOKEN_RE.finditer(raw):
+        tok = (m.group(1) or m.group(2) or m.group(3) or "").strip()
+        if not tok:
+            continue
+        # keep only known tokens for bare-word matches
+        base = tok.strip().strip("[]() ").lower()
+        if base in KNOWN:
+            bracketed = f"[{base}]"
+            if bracketed not in found:
+                found.append(bracketed)
+    return " ".join(found)
 
 def extract_training_pairs(feedback_path: str, output_path: str) -> None:
-    """
-    Reads controller/dataset/controller_feedback.jsonl and writes a clean
-    controller/dataset/controller_feedback_training.jsonl with {"input","output"} pairs.
-
-    Skips blank/malformed lines, logs why, and only exports samples that contain a
-    recognizable "Suggested tokens:" line with bracketed tokens.
-    """
     try:
         with open(feedback_path, "r", encoding="utf-8") as f:
-            lines = [ln for ln in f if ln.strip()]  # skip blanks early
+            lines = [ln for ln in f if ln.strip()]
     except FileNotFoundError:
         print(f"[extract] No feedback file found at: {feedback_path}")
         return
 
-    new_samples = 0
+    wrote = 0
     total = 0
-
     with open(output_path, "w", encoding="utf-8") as out:
-        for raw in lines:
+        for ln in lines:
             total += 1
+            ln = ln.strip()
             try:
-                rec = json.loads(raw)
+                rec = json.loads(ln)
             except json.JSONDecodeError as e:
-                print(f"[extract][SKIP] Bad JSON: {e}")
+                print(f"[extract][SKIP] Bad JSON line len={len(ln)} ({e}); skipping.")
                 continue
 
-            # Basic fields sanity
-            user = rec.get("input", "").strip()
-            evaluator = rec.get("evaluator_result", "").strip()
+            user = (rec.get("input") or "").strip()
+            evaluator = (rec.get("evaluator_result") or "").strip()
             if not user or not evaluator:
-                print("[extract][SKIP] Missing 'input' or 'evaluator_result'.")
+                print("[extract][SKIP] Missing input/evaluator_result.")
                 continue
 
-            # Find the 'Suggested tokens:' line (case-insensitive)
-            match = SUGGESTED_RE.search(evaluator)
-            if not match:
-                print("[extract][SKIP] No 'Suggested tokens:' line found.")
+            m = SUG_LINE_RE.search(evaluator)
+            if not m:
+                print("[extract][INFO] No 'Suggested tokens:' present; likely [good].")
                 continue
 
-            token_block = _clean_token_block(match.group(1))
-            if not token_block:
-                print("[extract][SKIP] Suggested tokens had no [token] blocks.")
+            norm = _normalize_tokens(m.group(1))
+            if not norm:
+                print("[extract][INFO] Suggested tokens empty/unrecognized; skipping training for this entry.")
                 continue
 
-            out.write(json.dumps({"input": user, "output": token_block}) + "\n")
-            new_samples += 1
+            out.write(json.dumps({"input": user, "output": norm}, ensure_ascii=False) + "\n")
+            wrote += 1
 
-    print(f"[extract] Parsed {total} feedback lines → wrote {new_samples} training samples to {output_path}")
+    print(f"[extract] Parsed {total} lines → wrote {wrote} training samples to {output_path}")
