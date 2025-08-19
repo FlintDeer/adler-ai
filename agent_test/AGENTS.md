@@ -1,0 +1,1 @@
+I want you to create a general purpose Hal 9000/Sal 9000 style AI system in c++ and python. Begin with the framework of the system. You can start in the folder designated as ("agent_test") to contain your 
