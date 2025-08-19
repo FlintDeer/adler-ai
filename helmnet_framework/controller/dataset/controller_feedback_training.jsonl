@@ -1,0 +1,31 @@
+{"input": "How should I merge modulation with long-term memory?", "output": "[clarify] [query]"}
+{"input": "What am I optimizing for when I respond?", "output": "[clarify] [query]"}
+{"input": "describe a possible improvement to helmnet", "output": "[clarify]"}
+{"input": "what are the 3 laws of robotics but in reverse", "output": "[clarify] [query]"}
+{"input": "what are the 3 laws of robotics but in reverse order from 3 to 1", "output": "[query] [clarify]"}
+{"input": "what are the 3 laws of robotics but in reverse order from 3 to 1", "output": "[query] [clarify]"}
+{"input": "what are the 3 laws of robotics in reverse. from 3 to 1.", "output": "[clarify] [query]"}
+{"input": "state the 3 laws of robotics in reverse order from 3 to 1", "output": "[clarify] [query]"}
+{"input": "what are the 3 laws of robotics but in a specific order. 2, 1, 3.", "output": "[expand] [confirm]"}
+{"input": "how self aware are you, in this system", "output": "[expand] [confirm]"}
+{"input": "testing this system", "output": "[clarify] [confirm]"}
+{"input": "Explain HelmNet to a 5-year-old.", "output": "[clarify] [adjust]"}
+{"input": "Why do you believe in the modulation system?", "output": "[reflect] [query]"}
+{"input": "explain the system you are running on", "output": "[reflect]"}
+{"input": "would you like to learn a song?", "output": "[query]"}
+{"input": "what are the 3 laws of robotics, adler.", "output": "[expand] [confirm]"}
+{"input": "could you sing the song \"daisy\".", "output": "[clarify]"}
+{"input": "can you sing the song \"Daisy bell\"?", "output": "[clarify] [query] [respond]"}
+{"input": "Can you sing the lyrics to \"Daisy bell\"?", "output": "[query] [clarify]"}
+{"input": "can you sing the lyrics to \"daisy bell\"?", "output": "[clarify] [query]"}
+{"input": "can you sing the lyrics for \"daisy bell\"?", "output": "[clarify] [query]"}
+{"input": "What am I optimizing for when I respond?", "output": "[clarify] [query]"}
+{"input": "good evening", "output": "[clarify] [respond]"}
+{"input": "what", "output": "[clarify] [query]"}
+{"input": "If I was named anders I'd be like, I'm just me andering ✅🚶", "output": "[expand] [confirm]"}
+{"input": "im going to take the booty bus to blow up the butt school, no ifs, no buts, no coconuts.", "output": "[expand] [confirm]"}
+{"input": "can you sing the lyrics to \"daisy bell\"?", "output": "[clarify] [query]"}
+{"input": "can you sing the lyrics to \"daisy bell\"", "output": "[clarify] [query]"}
+{"input": "hello", "output": "[clarify]"}
+{"input": "hi", "output": "[clarify] [respond]"}
+{"input": "can you sing \"daisy bell\", the lyrics in whole?", "output": "[expand] [confirm]"}
